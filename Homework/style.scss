@@ -11,8 +11,6 @@
 
 html {
     font-size: 16px;
-    line-height: 10px;
-    font-weight: 100;
 }
 
 body {
@@ -24,7 +22,85 @@ body {
     padding-right: calc(50% - 600px);
 }
 
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
 .header {
     padding-top: 196px;
     background: rgb(225, 255, 143);
+
+    &__star-container {
+        position: relative;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 78px;
+        color: $color-text;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 32px;
+        color: $color-text;
+        margin: 1.5rem 0 3rem 0;
+
+        &_word {
+            font-weight: 600;
+        }
+    }
+
+    &__button {
+        appearance: none;
+        font: inherit;
+        width: 247px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 600;
+        color: $color-w-text;
+        background: $color-bg;
+        border: none;
+        border-radius: calc($cart-radius * 2);
+        margin-bottom: 183px;
+    }
+
+    &__strip {
+        width: max-content;
+        height: 90px;
+        background: $color-item;
+        margin-left: -150px;
+        display: flex;
+        align-items: center;
+        gap: 51px;
+        padding: 0 49px;
+    }
+
+    &__strip-word {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    &__strip-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    &__BGstar1 {
+        position: absolute;
+        width: 35px;
+        left: 36px;
+        top: -127px;
+    }
+
+    &__BGstar2 {
+        position: absolute;
+        width: 57px;
+        left: -57px;
+        top: -102px;
+        fill: black;
+    }
 }
