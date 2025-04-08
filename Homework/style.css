@@ -20,17 +20,9 @@ body {
   padding-right: calc(50% - 600px);
 }
 
-.center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
-}
-
 .header {
   padding-top: 196px;
   background: rgb(225, 255, 143);
-}
-.header__star-container {
-  position: relative;
 }
 .header__title {
   font-size: 4rem;
@@ -45,13 +37,13 @@ body {
   color: rgb(32, 32, 39);
   margin: 1.5rem 0 3rem 0;
 }
-.header__description_word {
+.header__description-word {
   font-weight: 600;
 }
 .header__button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  display: block;
+  align-content: center;
+  text-align: center;
   font: inherit;
   width: 247px;
   height: 66px;
@@ -59,11 +51,17 @@ body {
   font-weight: 600;
   color: rgb(255, 255, 255);
   background: rgb(32, 32, 39);
-  border: none;
   border-radius: 60px;
   margin-bottom: 183px;
+  border: 1px solid rgb(32, 32, 39);
+}
+.header__button:hover {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(32, 32, 39);
 }
 .header__strip {
+  position: relative;
   width: -moz-max-content;
   width: max-content;
   height: 90px;
@@ -73,6 +71,7 @@ body {
   align-items: center;
   gap: 51px;
   padding: 0 49px;
+  z-index: 1;
 }
 .header__strip-word {
   font-size: 30px;
@@ -82,16 +81,155 @@ body {
   width: 36px;
   height: 36px;
 }
-.header__BGstar1 {
+
+.header-svg-container {
+  position: relative;
+}
+.header-svg-container__BGstar1 {
   position: absolute;
-  width: 35px;
   left: 36px;
   top: -127px;
 }
-.header__BGstar2 {
+.header-svg-container__BGstar2 {
   position: absolute;
-  width: 57px;
   left: -57px;
   top: -102px;
-  fill: black;
+}
+.header-svg-container__BGstar2 :first-child {
+  fill: rgb(188, 236, 48);
+}
+.header-svg-container__BGstar3 {
+  position: absolute;
+  left: 828px;
+  top: 342px;
+}
+.header-svg-container__BGstar3 :first-child {
+  fill: rgb(188, 236, 48);
+}
+.header-svg-container__BGstar4 {
+  position: absolute;
+  left: 893px;
+  top: 372px;
+}
+.header-svg-container__BGstar5 {
+  position: absolute;
+  left: 914px;
+  top: -463px;
+}
+.header-svg-container__BGstar5 :first-child {
+  fill: rgb(188, 236, 48);
+}
+.header-svg-container__triangle {
+  position: absolute;
+  left: 1127px;
+  top: 268px;
+}
+.header-svg-container__triangle :first-child {
+  fill: rgb(188, 236, 48);
+}
+.header-svg-container__vektor1 {
+  position: absolute;
+  left: 734px;
+  top: -210px;
+}
+.header-svg-container__vektor2 {
+  position: absolute;
+  left: 947px;
+  top: 54px;
+}
+.header-svg-container__vektor3 {
+  position: absolute;
+  left: 1105px;
+  top: 179px;
+}
+.header-svg-container__vektor4 {
+  position: absolute;
+  left: 1225px;
+  top: 463px;
+}
+
+.about-games {
+  background: rgb(32, 32, 39);
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.about-games__title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 78px;
+  color: rgb(255, 255, 255);
+}
+.about-games__description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(255, 255, 255);
+  padding: 24px 0 72px 0;
+}
+.about-games__box {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+.about-games__conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 1;
+}
+.about-games__card {
+  width: 378px;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+.about-games__card:hover {
+  transform: scale(1.08);
+}
+.about-games__card-box {
+  position: relative;
+}
+.about-games__card-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about-games__card-item {
+  padding: 32px 32px 36px 32px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.about-games__card-number {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 16px 10px 16px;
+  color: rgb(32, 32, 39);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+}
+.about-games__card-name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  color: rgb(32, 32, 39);
+}
+.about-games__BGstar1 {
+  position: absolute;
+  left: 846px;
+  top: -255px;
+}
+.about-games__BGstar2 {
+  position: absolute;
+  left: -77px;
+  top: 460px;
+}
+.about-games__BGstar3 {
+  position: absolute;
+  left: -93px;
+  top: 407px;
 }/*# sourceMappingURL=style.css.map */

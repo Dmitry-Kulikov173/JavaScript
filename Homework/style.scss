@@ -18,22 +18,13 @@ body {
 }
 
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
-}
-
-.center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - ($width-site / 2));
+    padding-right: calc(50% - ($width-site / 2));
 }
 
 .header {
     padding-top: 196px;
     background: rgb(225, 255, 143);
-
-    &__star-container {
-        position: relative;
-    }
 
     &__title {
         font-size: 4rem;
@@ -48,14 +39,16 @@ body {
         line-height: 32px;
         color: $color-text;
         margin: 1.5rem 0 3rem 0;
+    }
 
-        &_word {
+    &__description-word {
             font-weight: 600;
-        }
     }
 
     &__button {
-        appearance: none;
+        display: block;
+        align-content: center;
+        text-align: center;
         font: inherit;
         width: 247px;
         height: 66px;
@@ -63,12 +56,19 @@ body {
         font-weight: 600;
         color: $color-w-text;
         background: $color-bg;
-        border: none;
-        border-radius: calc($cart-radius * 2);
+        border-radius: calc($card-radius * 2);
         margin-bottom: 183px;
+        border: 1px solid $color-bg;
+    }
+
+    &__button:hover {
+        background: $color-bg-card;
+        border: 1px solid rgb(0, 0, 0);
+        color: $color-text;
     }
 
     &__strip {
+        position: relative;
         width: max-content;
         height: 90px;
         background: $color-item;
@@ -77,6 +77,7 @@ body {
         align-items: center;
         gap: 51px;
         padding: 0 49px;
+        z-index: 1;
     }
 
     &__strip-word {
@@ -88,19 +89,183 @@ body {
         width: 36px;
         height: 36px;
     }
+}
+
+.header-svg-container {
+    position: relative;
 
     &__BGstar1 {
         position: absolute;
-        width: 35px;
         left: 36px;
         top: -127px;
     }
 
     &__BGstar2 {
         position: absolute;
-        width: 57px;
         left: -57px;
         top: -102px;
-        fill: black;
+    }
+
+    &__BGstar2 :first-child {
+        fill: $color-item;
+    }
+
+    &__BGstar3 {
+        position: absolute;
+        left: 828px;
+        top: 342px;
+    }
+
+    &__BGstar3 :first-child {
+        fill: $color-item;
+    }
+
+    &__BGstar4 {
+        position: absolute;
+        left: 893px;
+        top: 372px;
+    }
+
+    &__BGstar5 {
+        position: absolute;
+        left: 914px;
+        top: -463px;
+    }
+
+    &__BGstar5 :first-child {
+        fill: $color-item;
+    }
+
+    &__triangle {
+        position: absolute;
+        left: 1127px;
+        top: 268px;
+    }
+
+    &__triangle :first-child {
+        fill: $color-item;
+    }
+
+    &__vektor1 {
+        position: absolute;
+        left: 734px;
+        top: -210px;
+    }
+
+    &__vektor2 {
+        position: absolute;
+        left: 947px;
+        top: 54px;
+    }
+
+    &__vektor3 {
+        position: absolute;
+        left: 1105px;
+        top: 179px;
+    }
+
+    &__vektor4 {
+        position: absolute;
+        left: 1225px;
+        top: 463px;
+    }
+}
+
+.about-games {
+    background: $color-bg;
+    padding-top: 94px;
+    padding-bottom: 50px;
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 78px;
+        color: $color-w-text;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 32px;
+        color: $color-w-text;
+        padding: 24px 0 72px 0;
+    }
+
+    &__box {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        z-index: 1;
+    }
+
+    &__card {
+        width: 378px;
+        background: $color-bg-card;
+        border-radius: $card-radius;
+        transition: transform 0.3s ease;
+    }
+    
+    &__card:hover {
+        transform: scale(1.08);
+    }
+
+    &__card-box {
+        position: relative;
+    }
+
+    &__card-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__card-item {
+        padding: 32px 32px 36px 32px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-number {
+        width: fit-content;
+        padding: 8px 16px 10px 16px;
+        color: $color-text;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+    }
+
+    &__card-name {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        color: $color-text;
+    }
+
+    &__BGstar1 {
+        position: absolute;
+        left: 846px;
+        top: -255px;
+    }
+
+    &__BGstar2 {
+        position: absolute;
+        left: -77px;
+        top: 460px;
+    }
+
+    &__BGstar3 {
+        position: absolute;
+        left: -93px;
+        top: 407px;
     }
 }
