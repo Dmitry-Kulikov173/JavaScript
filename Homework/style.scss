@@ -52,7 +52,7 @@ body {
         font: inherit;
         width: 247px;
         height: 66px;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         color: $color-w-text;
         background: $color-bg;
@@ -203,10 +203,11 @@ body {
         flex-direction: column;
         gap: 32px;
         z-index: 1;
+        grid-column: span 4;
     }
 
     &__card {
-        width: 378px;
+        width: 100%;
         background: $color-bg-card;
         border-radius: $card-radius;
         transition: transform 0.3s ease;
@@ -245,7 +246,7 @@ body {
     }
 
     &__card-name {
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 700;
         line-height: 39px;
         color: $color-text;
@@ -267,5 +268,130 @@ body {
         position: absolute;
         left: -93px;
         top: 407px;
+    }
+}
+
+.mini-games {
+    background: $color-bg;
+    padding-top: 46px;
+    padding-bottom: 144px;
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 78px;
+        color: $color-w-text;
+        margin-bottom: 72px;
+    }
+
+    &__conteiner {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: $color-bg-card;
+        border-radius: $card-radius;
+        grid-column: span 12;
+        z-index: 1;
+
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__card-box {
+        position: relative;
+        height: 500px;
+    }
+
+    &__card-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 128px;
+        height: 141px;
+    }
+
+    &__card-item {
+        width: 600px;
+        padding: 48px;
+        box-sizing: border-box;
+    }
+
+    &__card-name {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-text;
+    }
+
+    &__card-description {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 32px;
+        padding: 24px 0 36px 0;
+        color: $color-text;
+    }
+    
+    &__button {
+        font: inherit;
+        width: 247px;
+        height: 66px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-w-text;
+        background: $color-bg;
+        border-radius: calc($card-radius * 2);
+        border: 1px solid $color-bg;
+    }
+
+    &__button:hover {
+        background: $color-bg-card;
+        border: 1px solid rgb(0, 0, 0);
+        color: $color-text;
+    }
+
+    &__BGstar1 {
+        position: absolute;
+        left: 1158px;
+        top: -99px;
+    }
+
+    &__BGstar2 {
+        position: absolute;
+        left: 1201px;
+        top: -70px;
+    }
+
+    &__BGstar3 {
+        position: absolute;
+        left: 1130px;
+        top: calc(100% + 58px);
+    }
+
+    &__BGstar4 {
+        position: absolute;
+        left: 1201px;
+        top: calc(100% + 10px);
+    }
+}
+
+.footer {
+    display: flex;
+    background: $color-item;
+    padding-top: 61px;
+    padding-bottom: 60px;
+    justify-content: center;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 29px;
     }
 }
