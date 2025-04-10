@@ -235,52 +235,6 @@ body {
         grid-column: span 4;
     }
 
-    &__card {
-        width: 100%;
-        background: $color-bg-card;
-        border-radius: $card-radius;
-        transition: transform 0.3s ease;
-    }
-    
-    &__card:hover {
-        transform: scale(1.08);
-    }
-
-    &__card-box {
-        position: relative;
-    }
-
-    &__card-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    &__card-item {
-        padding: 32px 32px 36px 32px;
-        gap: 16px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__card-number {
-        width: fit-content;
-        padding: 8px 16px 10px 16px;
-        color: $color-text;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 52.58px;
-        background: rgb(247, 247, 247);
-    }
-
-    &__card-name {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 39px;
-        color: $color-text;
-    }
-
     &__BGstar1 {
         position: absolute;
         left: 846px;
@@ -298,6 +252,52 @@ body {
         left: -93px;
         top: 407px;
     }
+}
+
+.game-card {
+    width: 100%;
+    background: $color-bg-card;
+    border-radius: $card-radius;
+    transition: transform 0.3s ease;
+    
+    &__box {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item {
+        padding: 32px 32px 36px 32px;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__number {
+        width: fit-content;
+        padding: 8px 16px 10px 16px;
+        color: $color-text;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 39px;
+        color: $color-text;
+    }
+}
+
+.game-card:hover {
+    transform: scale(1.08);
 }
 
 .mini-games {
