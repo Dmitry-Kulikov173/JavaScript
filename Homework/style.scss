@@ -203,6 +203,7 @@ body {
     background: $color-bg;
     padding-top: 94px;
     padding-bottom: 50px;
+    overflow: hidden;
 
     &__title {
         font-size: 4rem;
@@ -303,6 +304,7 @@ body {
     background: $color-bg;
     padding-top: 46px;
     padding-bottom: 144px;
+    overflow: hidden;
 
     &__title {
         font-size: 4rem;

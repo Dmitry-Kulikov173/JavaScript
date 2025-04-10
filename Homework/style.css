@@ -169,6 +169,7 @@ body {
   background: rgb(32, 32, 39);
   padding-top: 94px;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 .about-games__title {
   font-size: 4rem;
@@ -256,6 +257,7 @@ body {
   background: rgb(32, 32, 39);
   padding-top: 46px;
   padding-bottom: 144px;
+  overflow: hidden;
 }
 .mini-games__title {
   font-size: 4rem;
